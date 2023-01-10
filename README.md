@@ -1,4 +1,4 @@
-Criação de um site completo
+Criação de um site completo (front e back end)
 
 Tecnologias utilizadas:
 <ul>
