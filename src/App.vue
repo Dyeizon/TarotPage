@@ -23,10 +23,10 @@ import Carousel from './components/Carousel/Carousel.vue';
 </script>
 
 <template>
-  <Header/>
-  <Carousel/>
+  <Header></Header>
+  <Carousel></Carousel>
+  <h1>teste 2</h1>
 </template>
 
 <style scoped>
-
 </style>
