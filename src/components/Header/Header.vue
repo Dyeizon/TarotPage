@@ -1,23 +1,50 @@
 <script>
-import Menu from './icons/MenuIcon.vue';
+import Menu from '../Menu/Menu.vue';
+import MenuIcon from './icons/MenuIcon.vue';
 import Logo from './icons/LogoIcon.vue';
 import Search from './icons/SearchIcon.vue';
 import Login from './icons/LoginIcon.vue';
+import { toHandlers } from 'vue';
 
 export default {
-    components: {
-      Menu,
-      Logo,
-      Search,
-      Login
+  data() {
+    return {
+      isMenuActive: false
     }
+  },
+
+  components: {
+    Menu,
+    MenuIcon,
+    Logo,
+    Search,
+    Login,
+  },
+  methods: {
+    openMenu: function() {
+      this.isMenuActive = true;
+      document.getElementById('menu').style.width = "300px";
+      document.getElementById('menuContent').style.opacity = "1";
+    },
+
+    closeMenu: function() {
+      document.getElementById('menu').style.width = "0px";
+      document.getElementById('menuContent').style.opacity = "0";
+      
+
+      setTimeout(() => {
+        this.isMenuActive = false;
+      }, 500)
+    }
+  }
 }
 </script>
 
 <template>
   <header class="sticky-top">
     <div class="container h-alignment">
-      <Menu/>
+      <Menu id="menu" @closeMenu="closeMenu" class="menu menuTransitions" :class="{'showMenu' : isMenuActive}"/>
+      <MenuIcon @openMenu="openMenu" :class="{'hideMenuIcon': isMenuActive}"/>
       <Logo/>
       <Search/>
       <Login/>
@@ -43,5 +70,13 @@ export default {
   .h-alignment {
     display: flex;
     align-items: center;
+  }
+
+  .hideMenuIcon {
+    visibility: hidden;
+  }
+
+  .showMenu {
+    visibility: visible;
   }
 </style>

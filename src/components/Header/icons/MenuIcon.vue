@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-    <button >
+    <button @click="this.$emit('openMenu');">
         <MenuIconSVG/>
     </button>
 </template>
