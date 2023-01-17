@@ -1,4 +1,11 @@
 <script>    
+import CarouselItem from './CarouselItem.vue';
+
+  export default {
+    components: {
+      CarouselItem
+    }
+  }
 </script>
 
 <template>
@@ -10,12 +17,9 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-    </div>
-    <div class="carousel-item">
-    </div>
-    <div class="carousel-item">
-    </div>
+    <CarouselItem class="active" title="Receba aconselhamento" subtitle="Realize uma consulta com um dos nossos tarólogos" buttonText="Quero uma consulta"/>
+    <CarouselItem title="Estude Tarologia" subtitle="Mais de 10 métodos de tiragem exclusivos para você" buttonText="Quero aprender"/>
+    <CarouselItem title="Visite a lojinha" subtitle="Diversos itens para sua ascenção no Tarot" buttonText="Quero comprar"/>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -42,8 +46,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
-    opacity: 0.5;
 }
 
 .carousel-item:nth-child(1) {

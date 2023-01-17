@@ -9,10 +9,5 @@ a {
 
 img {
     width: 70px;
-    transition: width 100ms;
-}
-
-a:hover img {
-    width: 78px;
 }
 </style>

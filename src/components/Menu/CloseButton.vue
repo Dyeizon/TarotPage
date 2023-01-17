@@ -18,5 +18,6 @@ export default {
     button {
         border: none;
         background-color: transparent;
+        height: 50%;
     }
 </style>
