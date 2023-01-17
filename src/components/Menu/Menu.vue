@@ -14,7 +14,11 @@ export default {
             <CloseButton @click="$emit('closeMenu')"/>
         </header>
         <div id="menuContent" class="menuTransitions">
-            <h1>teste</h1>
+            <ul>
+                <a href="#"><li>Meu arcano</li></a>
+                <a href="#"><li>Carta do dia</li></a>
+                <a href="#"><li>Leituras</li></a>
+            </ul>
         </div>
     </aside>
 </template>
@@ -25,7 +29,7 @@ export default {
         top: 0;
         left: 0;
         width: 0;
-        height: 100vh;
+        height: calc(100vh);
         background-color: #f9d366;
         opacity: 0.95;
         z-index: 1;
@@ -38,12 +42,39 @@ export default {
         margin-top: 20px;
         margin-right: 20px;
     }
+    
+    ul{
+        padding-left: 0;
+        padding-right: 10px;
+        margin: 0;
+        width: 300px;
+        height: 200px;
+    }
+
+    li {
+        padding: 10px 0px 10px 20px;
+        border-bottom: 1px solid black;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:hover {
+        color: black;
+    }
+
+    a:hover li {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
 </style>
 
 <style>
     .menuTransitions {
         opacity: 0;
         width: 0;
-        transition: width 0.5s, opacity 1s linear;
+        transition: width 0.5s, opacity 0.30s linear;
     }
 </style>

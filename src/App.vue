@@ -1,23 +1,13 @@
 <script>
 import Header from './components/Header/Header.vue';
 import Carousel from './components/Carousel/Carousel.vue';
+import Services from './components/Services/Services.vue';
 
   export default {
-    data() {
-      return {
-        count: 0
-      }
-    },
-
-    methods: {
-      increment() {
-        this.count++;
-      }
-    },
-    
     components: {
       Header,
-      Carousel
+      Carousel,
+      Services
     }
   }
 </script>
@@ -25,7 +15,7 @@ import Carousel from './components/Carousel/Carousel.vue';
 <template>
   <Header></Header>
   <Carousel></Carousel>
-  <h1>teste 2</h1>
+  <Services></Services>
 </template>
 
 <style scoped>

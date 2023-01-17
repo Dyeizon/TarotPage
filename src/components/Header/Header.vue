@@ -4,7 +4,6 @@ import MenuIcon from './icons/MenuIcon.vue';
 import Logo from './icons/LogoIcon.vue';
 import Search from './icons/SearchIcon.vue';
 import Login from './icons/LoginIcon.vue';
-import { toHandlers } from 'vue';
 
 export default {
   data() {
@@ -64,7 +63,6 @@ export default {
 
     position: sticky;
     position: -webkit-sticky;
-    top: 0px;
   }
 
   .h-alignment {
