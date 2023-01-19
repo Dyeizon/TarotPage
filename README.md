@@ -1,4 +1,4 @@
-Criação de um site completo (front e back end)
+# Projeto Front-end
 
 Tecnologias utilizadas:
 <ul>
