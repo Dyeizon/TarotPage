@@ -1,6 +1,6 @@
 # Projeto Front-end
 
-Tecnologias utilizadas:
+## Tecnologias utilizadas:
 <ul>
   <li>VueJS</li>
   <li>Bootstrap</li>
